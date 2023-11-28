@@ -21,5 +21,26 @@ namespace P520233_EmmanuelPerez.Formularios
         {
 
         }
+
+        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //en este caso se desea que la ventana muetre una unica vez en la aplicasion 
+            // para esto hay que revisar si la ventana esta visible 
+
+            if (!Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios.Visible)
+            {
+                // una reinstancia del objeto para asegurar que iniciamos en limpio 
+                Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios = new FrmUsuariosGestion();
+
+                Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios.Show(); 
+            }
+
+        }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
