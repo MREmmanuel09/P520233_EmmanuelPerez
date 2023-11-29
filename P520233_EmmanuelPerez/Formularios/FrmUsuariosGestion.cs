@@ -43,5 +43,17 @@ namespace P520233_EmmanuelPerez.Formularios
             DgvListaUsuarios.DataSource = lista;
 
         }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+            //lo primero que se hace es validar los datos minimos requeridos.
+            //se hace con el fin de evitar que quede registros vacidos o sin datos.
+           // tambien si un campo de base de datos no acepta valores nulos y e llama al insert dara un error.
+
+
+
+
+        }
     }
 }
