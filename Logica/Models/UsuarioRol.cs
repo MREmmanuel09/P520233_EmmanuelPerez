@@ -13,7 +13,6 @@ namespace Logica.Models
         public int UsuarioRolID { get; set; }
 
         // esta forma de escribir esta propiedad es autoimplementada pero se pierde funciones en get y set.
-        public String RolName { get; set; }
 
         // Luego de , escribir las propiedades se digita las funciones.
         public DataTable Listar()

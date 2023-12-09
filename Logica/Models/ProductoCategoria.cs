@@ -10,7 +10,6 @@ namespace Logica.Models
     public class ProductoCategoria
     {
         public int ProductoCategoriaID { get; set; }
-
         public string ProductoCategoriaDescripcion { get; set; }
 
         public DataTable Listar()

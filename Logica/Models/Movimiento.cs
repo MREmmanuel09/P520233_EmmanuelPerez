@@ -38,10 +38,9 @@ namespace Logica.Models
         {
             bool R = false;
 
-
-
             return R;
         }
+
         public bool ConsultarPorID()
         {
             bool R = false;
