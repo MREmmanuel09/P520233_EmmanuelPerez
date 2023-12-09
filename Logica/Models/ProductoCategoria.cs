@@ -16,7 +16,13 @@ namespace Logica.Models
         {
             DataTable R = new DataTable();
 
+
             return R;
         }
+
+
+
+
+
     }
 }

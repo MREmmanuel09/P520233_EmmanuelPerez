@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace P520233_EmmanuelPerez
+namespace P520233_EmmanuelPerez.Formularios
 {
-    public partial class Form1 : Form
+    public partial class FrmVisualizadorReportes : Form
     {
-        public Form1()
+        public FrmVisualizadorReportes()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmVisualizadorReportes_Load(object sender, EventArgs e)
         {
-
+            MdiParent = Globales.ObjetosGlobales.MiFormularioPrincipal;
         }
     }
 }

@@ -17,30 +17,69 @@ namespace P520233_EmmanuelPerez.Formularios
             InitializeComponent();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void gestiónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            //en este caso se desea que la ventana muetre una unica vez en la aplicasion 
-            // para esto hay que revisar si la ventana esta visible 
+            //En este caso quiero que la ventana se muestre solo una vez
+            //en la aplicación (que no se abran varias veces). Para esto
+            //hay que revisar si la ventana está o no visible 
 
             if (!Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios.Visible)
             {
-                // una reinstancia del objeto para asegurar que iniciamos en limpio 
+                //hago una reinstancia del objeto para asegurar que iniciamos en limpio
                 Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios = new FrmUsuariosGestion();
 
-                Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios.Show(); 
+                Globales.ObjetosGlobales.MiFormularioDeGestionDeUsuarios.Show();
             }
+
 
         }
 
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            LblUsuario.Text = Globales.ObjetosGlobales.MiUsuarioGlobal.Nombre + "(" +
+                              Globales.ObjetosGlobales.MiUsuarioGlobal.MiUsuarioRol.Rol + ")";
+
+            //ahora se debe ajustar los permisos de menús para que se muestren o no, dependiendo 
+            //del tipo de rol
+
+            switch (Globales.ObjetosGlobales.MiUsuarioGlobal.MiUsuarioRol.UsuarioRolID)
+            {
+                //admin
+                case 1:
+                    //como admin tiene acceso a todo, no es necesario ocultar opciones de menu
+                    break;
+
+                //empleado
+                case 2:
+                    //ocultan los menús correspondientes 
+                    MnuGestionUsuarios.Enabled = false;
+                    MnuGestionProductos.Enabled = false;
+                    MnuGestionCategorias.Enabled = false;
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+
+        private void entradasYSalidasDeInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.ObjetosGlobales.MiFormularioMovimientos.Visible)
+            {
+                Globales.ObjetosGlobales.MiFormularioMovimientos = new FrmMovimientosInventario();
+                Globales.ObjetosGlobales.MiFormularioMovimientos.Show();
+            }
+        }
+
+        private void FrmPrincipal_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -9,9 +9,19 @@ namespace P520233_EmmanuelPerez.Globales
 {
     public static class ObjetosGlobales
     {
-        // defiir un objeto grobal para el formulario principal 
+        //definir un objeto global para el form principal 
         public static Form MiFormularioPrincipal = new Formularios.FrmPrincipal();
 
-        public static Formularios.FrmUsuariosGestion MiFormularioDeGestionDeUsuarios = new Formularios.FrmUsuariosGestion();
+        public static Formularios.FrmUsuariosGestion
+            MiFormularioDeGestionDeUsuarios = new Formularios.FrmUsuariosGestion();
+
+        //este será el usuario validado en el login, tendrá un scope global 
+        //en toda la aplicación
+        public static Logica.Models.Usuario MiUsuarioGlobal = new Logica.Models.Usuario();
+
+        //formulario de movimientos de productos 
+        public static Formularios.FrmMovimientosInventario
+            MiFormularioMovimientos = new Formularios.FrmMovimientosInventario();
+
     }
 }
