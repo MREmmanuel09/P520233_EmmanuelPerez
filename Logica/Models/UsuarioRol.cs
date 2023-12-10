@@ -9,27 +9,25 @@ namespace Logica.Models
 {
     public class UsuarioRol
     {
-        // primero digitamos las propiedades de la clase 
+        //Primero digitamos las propiedades de la clase
+
         public int UsuarioRolID { get; set; }
+        //esta forma de escribir una propiedad es autoimplementada, es más sencilla 
+        //pero se pierde control en las funciones de get y set. 
+        public string Rol { get; set; }
 
-        // esta forma de escribir esta propiedad es autoimplementada pero se pierde funciones en get y set.
-        public String RolName { get; set; }
-
-        // Luego de , escribir las propiedades se digita las funciones.
+        //luego de escribir las props se digitan las funciones 
         public DataTable Listar()
-        { 
-           DataTable R = new DataTable();
+        {
+            DataTable R = new DataTable();
 
             Conexion MiCnn = new Conexion();
 
-            R = MiCnn.Ejecutarselect("SPUsuariosRolListar ");
-
-
-
-            // progra funsional para realizar el listar 
+            R = MiCnn.EjecutarSelect("SPUsuariosRolListar");
 
             return R;
         }
+
+
     }
 }
-  
