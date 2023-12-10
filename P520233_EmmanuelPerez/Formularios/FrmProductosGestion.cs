@@ -13,6 +13,8 @@ namespace P520233_EmmanuelPerez.Formularios
 {
     public partial class FrmProductosGestion : Form
     {
+
+
         public FrmProductosGestion()
         {
             InitializeComponent();
@@ -79,6 +81,13 @@ namespace P520233_EmmanuelPerez.Formularios
         {
 
         }
+
+        private void FrmProductosGestion_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
 

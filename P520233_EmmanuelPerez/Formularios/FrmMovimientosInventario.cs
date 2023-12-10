@@ -1,5 +1,4 @@
-﻿using CrystalDecisions.ReportAppServer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace P520233_EmmanuelPerez.Formularios
 {
@@ -58,7 +59,9 @@ namespace P520233_EmmanuelPerez.Formularios
                     TrasladarDetalles();
 
                     //ahora que tenemos todo listo, procedemos a agregar el movimiento 
-                    if (MiMovimientoLocal.Agregar())
+
+
+                   /* if (MiMovimientoLocal.Agregar())
                     {
 
                         MessageBox.Show("El Movimiento se ha agregado correctamente",
@@ -83,7 +86,7 @@ namespace P520233_EmmanuelPerez.Formularios
 
                         //TODO: Limpiar formulario 
 
-                    }
+                    }*/
 
                 }
 

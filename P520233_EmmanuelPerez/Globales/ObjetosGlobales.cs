@@ -23,6 +23,10 @@ namespace P520233_EmmanuelPerez.Globales
         public static Formularios.FrmMovimientosInventario
             MiFormularioMovimientos = new Formularios.FrmMovimientosInventario();
 
+        public static Form MiFormularioProductosGestion = null;
+
+
     }
 }
+// En el archivo Globales.cs en la carpeta Globales
 

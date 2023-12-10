@@ -153,6 +153,7 @@
             this.Controls.Add(this.dataGridViewProductos);
             this.Name = "FrmProductosGestion";
             this.Text = "FrmProductosGestion";
+            this.Load += new System.EventHandler(this.FrmProductosGestion_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductos)).EndInit();
             this.ResumeLayout(false);
 

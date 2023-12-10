@@ -75,6 +75,29 @@ namespace P520233_EmmanuelPerez.Formularios
                 Globales.ObjetosGlobales.MiFormularioMovimientos = new FrmMovimientosInventario();
                 Globales.ObjetosGlobales.MiFormularioMovimientos.Show();
             }
+     
+        
         }
+
+        private void gestionDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirVentanaGestionProductos();
+        }
+
+        private void AbrirVentanaGestionProductos()
+        {
+            if (Globales.ObjetosGlobales.MiFormularioProductosGestion == null || Globales.ObjetosGlobales.MiFormularioProductosGestion.IsDisposed)
+            {
+                // Si el formulario no existe o está cerrado, crea una nueva instancia
+                Globales.ObjetosGlobales.MiFormularioProductosGestion = new FrmProductosGestion();
+            }
+
+            // Muestra el formulario
+            Globales.ObjetosGlobales.MiFormularioProductosGestion.Show();
+        }
+
+
+
+
     }
 }

@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace P520233_EmmanuelPerez.Formularios
 {
-    public partial class FrmLogin : Form
+    public partial class frmLogin : Form
     {
-        public FrmLogin()
-        {
+       
+        public frmLogin() {
             InitializeComponent();
         }
-
         private void BtnVerContrasennia_MouseDown(object sender, MouseEventArgs e)
         {
             TxtContrasennia.UseSystemPasswordChar = false;
@@ -45,7 +44,7 @@ namespace P520233_EmmanuelPerez.Formularios
 
                 if (idUsuario > 0)
                 {
-                    //la validación es correcta. Ahora creamos el usuario global y además permitimos el ingreso 
+                    //la validación es correcta. Ahora creamos el usuario global y además permitimos el ingreso  
                     //al sistema 
 
                     Globales.ObjetosGlobales.MiUsuarioGlobal = Globales.ObjetosGlobales.MiUsuarioGlobal.ConsultarPorID(idUsuario);
@@ -81,17 +80,7 @@ namespace P520233_EmmanuelPerez.Formularios
 
         }
 
-        private void TxtContrasennia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmLogin_Load_1(object sender, EventArgs e)
+        private void frmLogin_Load_1(object sender, EventArgs e)
         {
 
         }

@@ -47,15 +47,29 @@
             this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCodigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.BtnModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LblTotalGranTotal = new System.Windows.Forms.Label();
+            this.LblTotalImpuestos = new System.Windows.Forms.Label();
+            this.LblTotalSubTotal = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LblTotalCosto = new System.Windows.Forms.Label();
+            this.BtnAplicar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.BtnModificar = new System.Windows.Forms.ToolStripButton();
             this.BtnEliminar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaDetalle)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,7 +83,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(876, 125);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ENCABEZADO (tabla Movimiento)";
             // 
@@ -132,7 +146,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 143);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(876, 414);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DETALLE (tabla MovimientoDetalle)";
             // 
@@ -223,7 +237,6 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Black;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnAgregar,
             this.toolStripSeparator1,
@@ -237,6 +250,186 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox3.Location = new System.Drawing.Point(12, 563);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(876, 81);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "TOTALES:";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.LblTotalGranTotal, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LblTotalImpuestos, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LblTotalSubTotal, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LblTotalCosto, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(870, 62);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // LblTotalGranTotal
+            // 
+            this.LblTotalGranTotal.AutoSize = true;
+            this.LblTotalGranTotal.BackColor = System.Drawing.Color.Black;
+            this.LblTotalGranTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblTotalGranTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTotalGranTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalGranTotal.ForeColor = System.Drawing.Color.DarkOrange;
+            this.LblTotalGranTotal.Location = new System.Drawing.Point(654, 25);
+            this.LblTotalGranTotal.Name = "LblTotalGranTotal";
+            this.LblTotalGranTotal.Size = new System.Drawing.Size(213, 37);
+            this.LblTotalGranTotal.TabIndex = 7;
+            this.LblTotalGranTotal.Text = "0";
+            this.LblTotalGranTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblTotalImpuestos
+            // 
+            this.LblTotalImpuestos.AutoSize = true;
+            this.LblTotalImpuestos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblTotalImpuestos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblTotalImpuestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTotalImpuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalImpuestos.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblTotalImpuestos.Location = new System.Drawing.Point(437, 25);
+            this.LblTotalImpuestos.Name = "LblTotalImpuestos";
+            this.LblTotalImpuestos.Size = new System.Drawing.Size(211, 37);
+            this.LblTotalImpuestos.TabIndex = 6;
+            this.LblTotalImpuestos.Text = "0";
+            this.LblTotalImpuestos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblTotalSubTotal
+            // 
+            this.LblTotalSubTotal.AutoSize = true;
+            this.LblTotalSubTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblTotalSubTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblTotalSubTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTotalSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalSubTotal.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblTotalSubTotal.Location = new System.Drawing.Point(220, 25);
+            this.LblTotalSubTotal.Name = "LblTotalSubTotal";
+            this.LblTotalSubTotal.Size = new System.Drawing.Size(211, 37);
+            this.LblTotalSubTotal.TabIndex = 5;
+            this.LblTotalSubTotal.Text = "0";
+            this.LblTotalSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Location = new System.Drawing.Point(654, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(213, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "TOTAL";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Location = new System.Drawing.Point(437, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(211, 25);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "IMPUESTOS";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(220, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(211, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "SUBTOTAL";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(211, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "COSTO";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblTotalCosto
+            // 
+            this.LblTotalCosto.AutoSize = true;
+            this.LblTotalCosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblTotalCosto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblTotalCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTotalCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCosto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblTotalCosto.Location = new System.Drawing.Point(3, 25);
+            this.LblTotalCosto.Name = "LblTotalCosto";
+            this.LblTotalCosto.Size = new System.Drawing.Size(211, 37);
+            this.LblTotalCosto.TabIndex = 1;
+            this.LblTotalCosto.Text = "0";
+            this.LblTotalCosto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BtnAplicar
+            // 
+            this.BtnAplicar.BackColor = System.Drawing.Color.Green;
+            this.BtnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAplicar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnAplicar.Location = new System.Drawing.Point(12, 650);
+            this.BtnAplicar.Name = "BtnAplicar";
+            this.BtnAplicar.Size = new System.Drawing.Size(651, 46);
+            this.BtnAplicar.TabIndex = 3;
+            this.BtnAplicar.Text = "APLICAR";
+            this.BtnAplicar.UseVisualStyleBackColor = false;
+            this.BtnAplicar.Click += new System.EventHandler(this.BtnAplicar_Click);
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Firebrick;
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnCancelar.Location = new System.Drawing.Point(670, 648);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(218, 48);
+            this.BtnCancelar.TabIndex = 4;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
             // BtnAgregar
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.DarkGreen;
@@ -245,13 +438,9 @@
             this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
             this.BtnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(169, 25);
+            this.BtnAgregar.Size = new System.Drawing.Size(165, 25);
             this.BtnAgregar.Text = "Agregar Producto";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnModificar
             // 
@@ -261,13 +450,8 @@
             this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
             this.BtnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(100, 25);
+            this.BtnModificar.Size = new System.Drawing.Size(96, 25);
             this.BtnModificar.Text = "Modificar";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
             // 
             // BtnEliminar
             // 
@@ -277,18 +461,22 @@
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
             this.BtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(91, 25);
+            this.BtnEliminar.Size = new System.Drawing.Size(87, 25);
             this.BtnEliminar.Text = "Eliminar";
             // 
             // FrmMovimientosInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 560);
+            this.ClientSize = new System.Drawing.Size(900, 714);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnAplicar);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FrmMovimientosInventario";
-            this.Text = "FrmMovimientosInventario";
+            this.Text = "Movimientos de Inventario";
             this.Load += new System.EventHandler(this.FrmMovimientosInventario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -297,6 +485,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaDetalle)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -304,14 +495,32 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtAnotaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CboxTipo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DtpFecha;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnAgregar;
+        private System.Windows.Forms.ToolStripButton BtnModificar;
+        private System.Windows.Forms.ToolStripButton BtnEliminar;
         private System.Windows.Forms.DataGridView DgvListaDetalle;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button BtnAplicar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Label LblTotalCosto;
+        private System.Windows.Forms.Label LblTotalGranTotal;
+        private System.Windows.Forms.Label LblTotalImpuestos;
+        private System.Windows.Forms.Label LblTotalSubTotal;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn CProductoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CCantidadMovimiento;
@@ -320,11 +529,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CTotalIVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn CCodigoBarras;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton BtnAgregar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton BtnModificar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton BtnEliminar;
     }
 }
