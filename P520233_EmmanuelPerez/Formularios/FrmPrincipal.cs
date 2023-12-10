@@ -76,5 +76,10 @@ namespace P520233_EmmanuelPerez.Formularios
                 Globales.ObjetosGlobales.MiFormularioMovimientos.Show();
             }
         }
+
+        private void FrmPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

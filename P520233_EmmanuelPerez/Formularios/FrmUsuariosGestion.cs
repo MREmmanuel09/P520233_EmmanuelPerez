@@ -288,14 +288,14 @@ namespace P520233_EmmanuelPerez.Formularios
         private void ActivarBotonAgregar()
         {
             BtnAgregar.Enabled = true;
-            BtnModificar.Enabled = false;
+           //  BtnModificar.Enabled = false;
             BtnEliminar.Enabled = false;
         }
 
         private void ActivarBotonesModificarYEliminar()
         {
             BtnAgregar.Enabled = false;
-            BtnModificar.Enabled = true;
+           // BtnModificar.Enabled = true;
             BtnEliminar.Enabled = true;
         }
 
@@ -460,6 +460,11 @@ namespace P520233_EmmanuelPerez.Formularios
             {
                 CargarListaUsuarios(CbVerActivos.Checked);
             }
+
+        }
+
+        private void FrmUsuariosGestion_Load_1(object sender, EventArgs e)
+        {
 
         }
     }
