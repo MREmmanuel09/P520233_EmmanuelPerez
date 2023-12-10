@@ -142,6 +142,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::P520233_EmmanuelPerez.Properties.Resources.gear_smart_eps_icon_digital_tech_business_logo_free_vector;
             this.pictureBox1.Location = new System.Drawing.Point(75, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 150);
