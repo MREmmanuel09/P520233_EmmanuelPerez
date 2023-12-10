@@ -81,7 +81,12 @@ namespace P520233_EmmanuelPerez.Formularios
 
         }
 
-        private void FrmLogin_Load_1(object sender, EventArgs e)
+        private void TxtContrasennia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
