@@ -63,7 +63,7 @@ namespace Logica
          Sirve para hacer consultas tipo: SELECT FROM y crear un
          DataTable con dicha info.
         */
-        public DataTable Ejecutarselect(String NombreSP, bool UsarEsquemaDeTabla = false)
+        public DataTable EjecutarSelect(string NombreSP, bool UsarEsquemaDeTabla = false)
         {
             DataTable Retorno = new DataTable();
 
@@ -78,9 +78,11 @@ namespace Logica
                         MyComando.Parameters.Add(item);
                     }
                 }
+
                 SqlDataAdapter MyAdaptador = new SqlDataAdapter(MyComando);
 
                 MyAdaptador.Fill(Retorno);
+
                 if (UsarEsquemaDeTabla)
                 {
                     Retorno = new DataTable();
@@ -121,5 +123,6 @@ namespace Logica
             this.CadenaDeConexion = ConfigurationManager.ConnectionStrings["CNNSTR"].ToString();
 
         }
+
     }
 }
