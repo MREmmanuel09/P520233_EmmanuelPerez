@@ -16,7 +16,7 @@ namespace P520233_EmmanuelPerez
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formularios.frmLogin ());
+            Application.Run(new Formularios.FrmLogin ());
         }
     }
 }

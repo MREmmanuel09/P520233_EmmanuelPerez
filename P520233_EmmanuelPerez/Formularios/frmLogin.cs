@@ -80,5 +80,10 @@ namespace P520233_EmmanuelPerez.Formularios
         {
 
         }
+
+        private void FrmLogin_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
