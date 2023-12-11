@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P520233_EmmanuelPerez.Formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace P520233_EmmanuelPerez
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formularios.FrmLogin ());
+            Application.Run(new FrmPrincipal());
+
         }
     }
 }
