@@ -19,12 +19,50 @@ namespace P520233_EmmanuelPerez.Formularios
 
         private void BtnVerContrasennia_MouseDown(object sender, MouseEventArgs e)
         {
-            TxtContrasennia.UseSystemPasswordChar = false; 
+            TxtContrasennia.UseSystemPasswordChar = false;
         }
 
         private void BtnVerContrasennia_MouseUp(object sender, MouseEventArgs e)
         {
-            TxtContrasennia.UseSystemPasswordChar=true;
+            TxtContrasennia.UseSystemPasswordChar = true;
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnIngresar_Click(object sender, EventArgs e)
+        {
+            // Acceso directo al formulario principal sin validación
+            if (Globales.ObjetosGlobales.MiFormularioPrincipal == null)
+            {
+                Globales.ObjetosGlobales.MiFormularioPrincipal = new FrmPrincipal(); // Asegúrate de reemplazar 'FormPrincipal' con el nombre correcto de tu formulario principal
+            }
+
+            Globales.ObjetosGlobales.MiFormularioPrincipal.Show();
+            this.Hide();
+        }
+
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Shift & e.Control & e.KeyCode == Keys.A)
+            {
+                BtnIngresoDirecto.Visible = true;
+            }
+        }
+
+        private void BtnIngresoDirecto_Click(object sender, EventArgs e)
+        {
+            // Acceso directo al formulario principal sin validación
+            Globales.ObjetosGlobales.MiFormularioPrincipal.Show();
+            this.Hide();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
