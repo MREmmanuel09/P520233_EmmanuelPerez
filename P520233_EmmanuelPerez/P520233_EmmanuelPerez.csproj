@@ -158,9 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reportes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gear-smart-eps-icon-digital-tech-business-logo-free-vector.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
