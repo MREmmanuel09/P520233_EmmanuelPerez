@@ -28,5 +28,5 @@ namespace P520233_EmmanuelPerez.Globales
 
     }
 }
-// En el archivo Globales.cs en la carpeta Globales
+
 
